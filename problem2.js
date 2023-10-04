@@ -5,7 +5,7 @@
 
 const isPalindrome = (str) => {
     const output = str.split('').reverse().join('')
-    return output === str ? 'Number is Plaindrome' : 'Number is not palindrome'
+    return output === str ? 'The given string is Palindrome' : 'The given string is not palindrome'
 }
 
 console.log(isPalindrome('aba'))
