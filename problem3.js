@@ -6,7 +6,7 @@
 const amstrongNum = (input)=>{
     let num = input
     let output = 0
-    let length = ('' + input).length
+    let length = input.toString().length
     for (let i = 0; i < length; i++){
         let eachDigit = num%10;
         output += eachDigit**length;
