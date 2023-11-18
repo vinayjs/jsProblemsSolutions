@@ -22,4 +22,32 @@ const maxSub = (arr, k) => {
     return result;
 }
 
-console.log(maxSub([2, 1, 5, 1, 3, 2], 3))
+// console.log(maxSub([2, 1, 5, 1, 3, 2], 3))
+
+
+let input = 'dbc'
+let check = 'bcd'
+
+const checkInput = (x, y) => {
+  let str = x.split('');
+  let checker = y.split('');
+  let strArray =[];
+  let checkerArray=[]
+  for (let i =0; i <= x.length -1; i++) {
+    for (let j = 0; j <= checker.length-1; j++){
+        // console.log(str[i], 'str')
+        // console.log(checker[j], 'chec')
+        if ( checker[j] === x[i] ){
+            checkerArray.push(checker.splice(j, 1))
+            strArray.push(str.splice(i, 1))      
+        } 
+        if (i !== 0 && i > 0) i-= 1;
+    }
+    console.log(checkerArray, 'checkerarray')
+    console.log('strarray', strArray)
+  }
+//   return strArray
+}
+
+console.log(checkInput(input, check))
+
